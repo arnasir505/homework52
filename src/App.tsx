@@ -1,14 +1,23 @@
-import { useState } from 'react';
 import './App.css';
 import Card from './components/Card';
+import CardDeck from './lib/CardDeck';
 
 function App() {
+  const cardDeck = new CardDeck();
+  const handCards = cardDeck.getCards(5);
+  const handCardsEl = handCards.map((card) => {
+    return <Card rank={card.rank} suit={card.suit} />;
+  });
   return (
     <div className='playingCards faceImages'>
-      <Card rank='2' suit='♦' />
-      <Card rank='3' suit='♥' />
-      <Card rank='4' suit='♣' />
-      <Card rank='5' suit='♠' />
+      <button
+        onClick={() => {
+          console.log(cardDeck.cardDeck);
+        }}
+      >
+        Show cardDeck
+      </button>
+      {handCardsEl}
     </div>
   );
 }

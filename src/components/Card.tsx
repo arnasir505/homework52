@@ -6,14 +6,14 @@ interface Props {
 }
 
 type Suits = {
-    [key: string]: string
-}
+  [key: string]: string;
+};
 
 const suits: Suits = {
   '♦': 'diams',
   '♥': 'hearts',
   '♣': 'clubs',
-  '♠': 'spades'
+  '♠': 'spades',
 };
 
 const Card: React.FC<Props> = ({ rank, suit }) => {
