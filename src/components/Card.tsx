@@ -16,7 +16,7 @@ const suits: Suits = {
   '♠': 'spades',
 };
 
-const Card: React.FC<Props> = ({ rank, suit }) => {
+const CardComponent: React.FC<Props> = ({ rank, suit }) => {
   return (
     <span className={`card rank-${rank.toLowerCase()} ${suits[suit]}`}>
       <span className='rank'>{rank}</span>
@@ -25,4 +25,4 @@ const Card: React.FC<Props> = ({ rank, suit }) => {
   );
 };
 
-export default Card;
+export default CardComponent;

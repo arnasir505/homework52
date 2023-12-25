@@ -20,17 +20,17 @@ class CardDeck {
   public cardDeck: Card[];
 
   getCard() {
-    const randomInt = Math.floor(Math.random() * this.cardDeck.length)
-    const randomCard = this.cardDeck.splice(randomInt, 1)[0]
-    return randomCard
+    const randomInt = Math.floor(Math.random() * this.cardDeck.length);
+    const randomCard = this.cardDeck.splice(randomInt, 1)[0];
+    return randomCard;
   }
 
   getCards(howMany: number): Card[] {
-    const handCards = [];
+    const randomCards = [];
     for (let i = 0; i < howMany; i++) {
-      handCards.push(this.getCard());
+      randomCards.push(this.getCard());
     }
-    return handCards
+    return randomCards;
   }
 
   constructor() {
